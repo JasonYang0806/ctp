@@ -26,6 +26,5 @@ public class Solution {
         leftTail.right = root.right;
         root.right = root.left;
         root.left = null;
-    }
-    
+    }   
 }
