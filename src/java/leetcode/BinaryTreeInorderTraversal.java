@@ -7,6 +7,42 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
+
+// Iterative version.
+public class Solution {
+    public ArrayList<Integer> inorderTraversal(TreeNode root) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        ArrayList<Integer> resList = new ArrayList<Integer>();
+        if(root == null) return resList;
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        stack.push(root);
+        TreeNode node, left, right;
+        while(!stack.isEmpty()){
+            node = stack.pop();
+            left = node.left;
+            right = node.right;
+            
+            if(left == null && right == null){
+                resList.add(node.val);
+            }
+            if(right != null){
+                stack.push(right);
+            }
+            if(left != null || right != null){
+                stack.push(node);
+            }
+            if(left != null){
+                stack.push(left);
+            }
+            node.left = null;
+            node.right = null;
+        }
+        return resList;
+    }
+}
+
+// Recursive version.
 public class Solution {
     public ArrayList<Integer> inorderTraversal(TreeNode root) {
         // Start typing your Java solution below
