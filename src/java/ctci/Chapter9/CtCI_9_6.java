@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Implement an algorithm to print all valid combination of n-pairs of parentheses.
  */
 
-public class ctci_9_6 {
+public class CtCI_9_6 {
 	public static void main(String[] args){
 		for(String parenthese : validParentheses(3)){
 			System.out.println(parenthese);

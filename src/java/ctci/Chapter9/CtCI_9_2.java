@@ -13,7 +13,7 @@ package CTCI_Chapter_9;
 
 import java.util.LinkedList;
 
-public class ctci_9_2 {
+public class CtCI_9_2 {
 	private static long[][] pathNum;
 	
 	public static void main(String[] args){

@@ -7,7 +7,7 @@ package CTCI_Chapter_9;
  * 			a point, and a new color, fill in the surrounding area until teh color changes from the 
  * 			original color.
  */
-public class ctci_9_7 {
+public class CtCI_9_7 {
 	public static void main(String[] args){
 		Color[][] screen = {
 							{Color.BLUE, Color.GREEN, Color.WHITE, Color.WHITE},

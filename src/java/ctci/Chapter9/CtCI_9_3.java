@@ -10,7 +10,7 @@ package CTCI_Chapter_9;
  * 			What if the values are not distinct.
  */
 import java.util.ArrayList;
-public class ctci_9_3 {
+public class CtCI_9_3 {
 	public static void main(String[] args){
 //		int[] A = {-40, -20, -1, 1, 2, 3, 5, 7, 9, 12, 13};
 //		System.out.println(magicIndex(A));

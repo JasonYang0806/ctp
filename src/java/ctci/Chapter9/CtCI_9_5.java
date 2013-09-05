@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * @author JasonYang
  * Subject: Write a method to compute all permutations of a string.
  */
-public class ctci_9_5 {
+public class CtCI_9_5 {
 	public static void main(String[] args){
 		String input = "abb";
 		ArrayList<String> permutation = permutation(input);

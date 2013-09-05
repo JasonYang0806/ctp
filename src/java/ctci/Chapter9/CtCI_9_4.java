@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * @author longyang
  * Subject: Write a method to return all subsets of a set
  */
-public class ctci_9_4 {
+public class CtCI_9_4 {
 	public static void main(String[] args){
 		ArrayList<Integer> input = new ArrayList<Integer>();
 		for(int i = 1; i <= 2; i ++){
