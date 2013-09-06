@@ -35,7 +35,7 @@ public class Solution {
         				_head.left.next = (_head.right != null ? _head.right : null);
         			}
         		}
-        		_head = head.next;
+        		_head = _head.next;
         	}
         	head = findNextHead(head);
         }
