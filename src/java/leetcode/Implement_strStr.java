@@ -1,3 +1,4 @@
+// Two Pointer
 public class Solution {
     public String strStr(String haystack, String needle) {
         // Start typing your Java solution below
@@ -28,3 +29,7 @@ public class Solution {
         }
     }
 }
+
+// KMP
+
+// Rolling Hash
