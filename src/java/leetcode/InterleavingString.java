@@ -97,3 +97,25 @@ public class Solution {
         return M[len1][len2];
     }
 }
+
+// Better recursive code
+public class Solution {
+    public boolean isInterleave(String s1, String s2, String s3) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        if(s1 == null && s2 != null) return s2.equals(s3);
+        if(s1 != null && s2 == null) return s1.equals(s3);
+        if(s1 == null && s2 == null) return s3 == null ? true : false;
+        if(s1.length() + s2.length() != s3.length()) return false;
+        if(s3.length() == 0) return true;
+        
+        boolean res = false;
+        if(s1.length() > 0 && s1.charAt(0) == s3.charAt(0)){
+            res = res || isInterleave(s1.substring(1), s2, s3.substring(1));
+        }
+        if(s2.length() > 0 && s2.charAt(0) == s3.charAt(0)){
+            res = res || isInterleave(s1, s2.substring(1), s3.substring(1));
+        } 
+        return res;
+    }
+}
