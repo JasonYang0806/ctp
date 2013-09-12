@@ -9,6 +9,34 @@
  *     }
  * }
  */
+
+// Fake Node: it works!!!!!!
+public class Solution {
+    public ListNode deleteDuplicates(ListNode head) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        ListNode fake = new ListNode(Integer.MIN_VALUE);
+        fake.next = head;
+        head = fake;
+        
+        ListNode pre = head, cur = head.next, nxt;
+        while(cur != null && cur.next != null){
+            while(cur.next != null && cur.val != cur.next.val){
+                pre = cur;
+                cur = cur.next;
+            }
+            if(cur.next != null){
+                nxt = cur.next;
+                while(nxt != null && nxt.val == cur.val) nxt = nxt.next;
+                pre.next = nxt;
+                cur = nxt;
+            }
+        }
+        return head.next;
+    }
+}
+
+
 public class Solution {
     public ListNode deleteDuplicates(ListNode head) {
         // Start typing your Java solution below
