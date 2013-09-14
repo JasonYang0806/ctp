@@ -4,7 +4,7 @@ public class Solution {
         // Start typing your Java solution below
         // DO NOT write main() function
         // Base cases:
-        if(A == null || A.length == 0) return 0;
+        if(A == null) return 0;
         
         // Real two pointers process:
         int left = 0, right = A.length - 1;
