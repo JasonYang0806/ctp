@@ -34,19 +34,13 @@ public class Solution {
                     if(_index <= S.length() - strLen)
                         _str = S.substring(_index, _index + strLen);
                     else 
-                        break;
+                        return res;
                 }
                 if(tmpMap.isEmpty()){
                     res.add(index);
-                    index++;
-                }else if(!tmpMap.containsKey(_str)){
-                    index++;
-                }else{
-                    return res;
                 }
-            }else{
-                index++;
             }
+            index++;
         }
         return res;
     }
