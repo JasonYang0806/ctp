@@ -24,7 +24,7 @@ public class CtCi_3_2 {
 		}
 	}
 	
-	public static class MinStack{
+	private static class MinStack{
 		Stack<Integer> stack;
 		Stack<Integer> min;
 		
