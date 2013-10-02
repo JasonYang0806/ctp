@@ -1,4 +1,4 @@
-package CTCI_Chapter_9;
+package ctci.Chapter9;
 
 /**
  * 

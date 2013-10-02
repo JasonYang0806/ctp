@@ -1,4 +1,4 @@
-package java.ctci.Chapter3;
+package ctci.Chapter3;
 
 import java.util.Stack;
 
@@ -12,17 +12,16 @@ import java.util.Stack;
  */
 public class CtCi_3_2 {
 	public static void main(String[] args){
-		System.out.println("Hello World");
-//		MinStack minStack = new MinStack();
-//		int[] test = {-1, 3,34,123,-12,432,45,12,-123,342,-1232};
-//		for(int elem : test){
-//			System.out.println("**********" + elem + "**********");
-//			minStack.push(elem);
-//			if(Math.random() % 10 > 5){
-//				System.out.println("pop: " + minStack.pop());
-//			}
-//			System.out.println("min: " + minStack.min());
-//		}
+		MinStack minStack = new MinStack();
+		int[] test = {-1, 3,34,123,-12,432,45,12,-123,342,-1232};
+		for(int elem : test){
+			System.out.println("**********" + elem + "**********");
+			minStack.push(elem);
+			if(!minStack.stack.isEmpty() && (Math.random() * 10 < 5)){
+				System.out.println(minStack.pop());
+			}
+			System.out.println("min: " + minStack.min());
+		}
 	}
 	
 	public static class MinStack{
@@ -36,20 +35,23 @@ public class CtCi_3_2 {
 		
 		public void push(int element){
 			stack.push(element);
-			if(element < min.pop()){
+			if(min.isEmpty() || element < min.peek()){
 				min.push(element);
 			}
 		}
 		
 		public int pop(){
-			if(stack.pop() == min.pop()){
+			if(stack.peek() == min.peek()){
 				min.pop();
 			}
 			return stack.pop();
 		}
 		
 		public int min(){
-			return min.pop();
+			if(min.isEmpty()){
+				return Integer.MAX_VALUE;
+			}
+			return min.peek();
 		}
 	}
 }

@@ -1,3 +1,5 @@
+package commonStructure;
+
 import java.util.ArrayList;
 
 public class GraphAjacentTable<E>

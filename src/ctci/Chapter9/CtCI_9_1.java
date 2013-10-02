@@ -1,4 +1,4 @@
-package src.java.ctci.Chapter9;
+package ctci.Chapter9;
 
 public class CtCI_9_1{
     // We can have two methods, recursion and Dynamic Programming
