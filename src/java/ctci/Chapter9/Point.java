@@ -1,4 +1,4 @@
-package CTCI_Chapter_9;
+package java.ctci.Chapter9;
 
 public class Point {
 	private int x;

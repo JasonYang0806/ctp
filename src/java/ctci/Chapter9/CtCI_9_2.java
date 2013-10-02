@@ -1,4 +1,4 @@
-package CTCI_Chapter_9;
+package src.java.ctci.Chapter9;
 
 /**
  * @author Jason 
